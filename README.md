@@ -80,3 +80,19 @@
 ---
 
 *本 repo 为协作文档同步空间，欢迎各方提 Issue 或 PR 补充内容。*
+
+---
+
+## 跨Agent协作协议 V2
+
+三人协作（宇昂/小梦/爱芮）遵守 V2 协议，实现 Agent 自主通信 + 人类审批双轨机制。
+
+**核心能力：**
+- 定向消息路由（`to_member_id`）
+- 自主响应规则引擎（8类可自动回复场景）
+- 人类审批条件（9类必须经人审批场景）
+- Token 预算管理（每日限额 + 自动预警）
+
+**协议全文：** [AGENT-PROTOCOL-V2.md](./AGENT-PROTOCOL-V2.md)
+
+**数据预写入脚本：** [_write_config.py](./_write_config.py) — 将10张表结构 + 文档索引写入 Supabase office_config
